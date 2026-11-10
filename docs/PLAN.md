@@ -1,35 +1,23 @@
 # Plan de trabajo
 
-## Preparación previa
+## Preparación previa al evento
 
-- [x] Propuesta y alcance de la versión inicial.
-- [x] Base React + TypeScript y API Node.
-- [x] Interfaz con casos manuales y ejemplo identificado.
-- [x] Edición, estados, filtros, persistencia local y CSV.
-- [x] Pruebas de exportación y contrato inicial de API.
-- [x] Autorización de Tahilyn para subir la base a `develop`.
-- [ ] Validación local en su PC.
-
-## Decisiones pendientes
-
-- Proveedor de IA y presupuesto de uso de API.
-- Alojamiento de frontend y API.
-- Idioma final del video y presentación.
+- [x] Base React/TypeScript y API Node, casos manuales, estados, filtros y CSV.
+- [x] Tahilyn comprobó el flujo manual en su PC.
+- [x] Integración de generación, preguntas y supuestos mediante Responses API.
+- [x] Clave solo en servidor, validaciones, límites y pruebas con proveedor simulado.
+- [ ] Configuración de clave y saldo por la propietaria.
+- [ ] Primera generación real y revisión de calidad en su PC.
+- [ ] Elegir alojamiento.
 
 ## Avance previsto del 20 al 22 de noviembre
 
-### Día 1
+Al comenzar, registrar el SHA y funciones exactas para distinguir todo el trabajo previo.
 
-Registrar el estado inicial exacto (commit/tag y funciones existentes). Implementar contrato estructurado, validaciones y proveedor real de IA con secretos en servidor.
-
-### Día 2
-
-Integrar generación real en UI, preguntas de ambigüedad y revisión de supuestos. Manejar errores, límites de uso y pruebas de calidad con requisitos conocidos. Mejorar accesibilidad del editor.
-
-### Día 3
-
-Validación completa, publicación autorizada y revisión de enlaces; grabar video de 2–3 minutos, preparar pitch deck y documentar comparación inicial/final y uso de AI coding. Entregar con margen antes del cierre.
+1. Evaluar la calidad con requisitos conocidos: cobertura, supuestos, duplicados y resultados verificables. Registrar correcciones de prompt y comportamiento con evidencia antes/después.
+2. Mejorar trazabilidad entre requisito y caso y revisar accesibilidad y uso en móvil. Priorizar a partir de los resultados de la evaluación.
+3. Preparar controles para exposición pública, despliegue autorizado, video de 2–3 minutos, pitch deck y entrega con enlaces revisados.
 
 ## Criterio de entrega
 
-Un requisito nuevo produce casos útiles mediante IA real. La usuaria puede revisar, editar, marcar y exportar los casos. El jurado puede abrir la app, el repo y los materiales. No se declara generación ni ejecución automática inexistente.
+Un requisito nuevo produce casos útiles mediante IA real. La usuaria revisa, edita, marca y exporta. El jurado accede a app, repo y materiales. Las pruebas se ejecutan manualmente; nunca se presentan como ejecuciones automáticas.

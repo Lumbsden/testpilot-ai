@@ -10,11 +10,11 @@ test('CSV conserva comillas, comas y saltos de línea y neutraliza fórmulas',()
   assert.ok(output.includes('"Texto ""válido"""'));
 });
 test('API informa que IA no está conectada y nunca devuelve una generación ficticia',async()=>{
-  const server=createApi();await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+  const server=createApi({apiKey:''});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   try {
     const base=`http://127.0.0.1:${server.address().port}`;
     const health=await fetch(base+'/api/health');assert.equal(health.status,200);assert.equal((await health.json()).aiConfigured,false);
-    const generation=await fetch(base+'/api/generate',{method:'POST'});assert.equal(generation.status,501);
+    const generation=await fetch(base+'/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({requirements:'Un usuario inicia sesión con su correo y contraseña.'})});assert.equal(generation.status,503);
     const missing=await fetch(base+'/api/unknown');assert.equal(missing.status,404);
   } finally {await new Promise(resolve=>server.close(resolve));}
 });

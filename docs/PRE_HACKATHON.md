@@ -25,3 +25,9 @@ ChatGPT/Codex asistió con el diseño del alcance, estructura, implementación d
 4. Registrar por separado cada avance del 20–22 de noviembre.
 
 Commit de referencia al inicio: pendiente.
+
+## Preparación adicional · 10 de noviembre de 2026
+
+Antes de comenzar el evento se preparó la integración con Responses API de OpenAI, modelo configurable (predeterminado `gpt-6-luna`), salida estructurada y validación del plan. La interfaz permite generar, mostrar dudas y supuestos y conservar el plan anterior cuando falla la solicitud. Incluye validación de entrada, límites locales, tiempo de espera y carga de `.env` solo en el servidor.
+
+La implementación se verificó con respuestas de proveedor simuladas. No se configuró una clave real ni se realizaron generaciones pagadas. También se incorporó la confirmación de Tahilyn de que el flujo manual de v0.1 funcionó en su PC. Esta integración y cualquier validación anterior al 20 de noviembre deben declararse como trabajo previo.

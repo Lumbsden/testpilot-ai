@@ -3,7 +3,8 @@ export interface TestCase {
   id: string; title: string; kind: string; priority: string;
   steps: string; expected: string; status: Status;
 }
-export interface Plan { requirements: string; cases: TestCase[]; }
+export interface Analysis { clarifications: string[]; assumptions: string[]; model: string; }
+export interface Plan { requirements: string; cases: TestCase[]; analysis?: Analysis; }
 export const exampleRequirements = 'El paciente selecciona médico, fecha y horario, e ingresa nombre y WhatsApp para reservar una cita. No se permite reservar un horario ocupado.';
 export const exampleCases: TestCase[] = [
   {id:'TC-001', title:'Reservar una cita con datos válidos', kind:'Positivo', priority:'Alta', steps:'1. Seleccionar un médico y horario disponible.\n2. Ingresar nombre y WhatsApp válidos.\n3. Confirmar la reserva.', expected:'Se crea una sola cita y se muestra la confirmación.', status:'pending'},

@@ -25,3 +25,11 @@ Antes de exposición pública: limitar peticiones y costo, restringir tamaño de
 ## Límites conocidos
 
 Sin API de IA, nube, colaboración, autenticación ni automatización de ejecución. Persistencia limitada a un navegador y origen. Una sola copia local; no ofrece control de concurrencia entre pestañas. El editor usa formularios nativos; falta endurecer gestión de foco para los diálogos antes de publicación.
+
+## Integración local preparada · v0.2
+
+El plan de integración anterior se implementó para desarrollo local: `server/ai.mjs` invoca Responses API con esquema estricto y vuelve a validar sus campos. La clave se carga desde `.env` con Node; no se serializa en respuestas ni logs. `POST /api/generate` acepta exclusivamente el requisito, sin claves, URL ni modelo desde el navegador. El proveedor está fijado a `https://api.openai.com/v1/responses`; el modelo se elige en configuración del servidor.
+
+`GET /api/health` indica si hay una clave configurada (no demuestra su validez). No se invoca al proveedor al iniciar ni al cargar ejemplos. Una petición válida tiene un solo intento, un límite de 4,500 tokens de salida y 45 segundos. Se rechazan orígenes/hosts no locales, métodos y cuerpos inválidos. Los mensajes del proveedor no se devuelven literalmente al usuario.
+
+La interfaz comprueba la disponibilidad, muestra carga y errores, confirma reemplazos y actualiza el plan solo tras recibir una salida válida. Los planes previos en almacenamiento local siguen siendo compatibles. Las preguntas y supuestos del plan nuevo se conservan con los casos. No se ejecuta código ni pruebas sugeridas por el modelo. Falta verificar calidad real y funcionamiento con saldo.

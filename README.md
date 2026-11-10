@@ -4,7 +4,7 @@ Asistente web para convertir requisitos en planes de pruebas. Proyecto para Dojo
 
 ## Estado actual
 
-Prototipo previo al hackatón: casos manuales y de ejemplo, edición, seguimiento de resultados y exportación CSV. Los datos se guardan en este navegador. **La generación con IA está pendiente**; esta versión no requiere claves ni servicios de pago.
+Preparación previa al hackatón: casos manuales y de ejemplo, edición, resultados y exportación CSV. Integración con OpenAI lista para configurar: genera casos, dudas y supuestos desde un requisito. **La prueba real con una clave y saldo sigue pendiente.** Los planes se guardan en este navegador. El modo manual no consume la API.
 
 ## Ejecutar
 
@@ -18,6 +18,8 @@ npm run dev
 ```
 
 Abre http://127.0.0.1:5173. Para verificar: `npm test` y `npm run build`.
+
+Para activar la IA consulta la [configuración local](docs/AI_SETUP.md).
 
 ## Documentación
 

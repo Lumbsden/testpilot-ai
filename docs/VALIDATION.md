@@ -18,3 +18,9 @@ Pendiente: ejecutar la lista manual del README en el PC de la propietaria, compr
 5. Añadir un caso manual y exportar CSV; comprobar saltos de línea y caracteres especiales.
 6. Reiniciar y comprobar el estado vacío.
 
+
+## Integración local · v0.2
+
+11 pruebas automáticas aprobadas, con proveedor simulado: contrato Responses, validación de entrada y salida, errores sin detalles privados, límites y concurrencia, tiempo de espera y comportamiento del cliente ante éxito/error. TypeScript y build de producción aprobados. Ninguna prueba usa una clave real ni genera cargos.
+
+Tahilyn confirmó previamente que la carga de ejemplos, edición, estados, persistencia y CSV de v0.1 funcionaban en su PC. No se declara validada visualmente la interfaz nueva de generación. Pendientes: primera petición real, evaluación de calidad de los casos y revisión visual de carga/errores y análisis en su PC.
